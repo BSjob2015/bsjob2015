@@ -5,17 +5,17 @@
    ========================================================= */
 
 :root{
-  --navy-deep:#1F1914;
-  --navy-mid:#332921;
-  --brand-1:#4A382A;      /* 따뜻한 브라운 토프 */
-  --brand-2:#6E5440;
-  --paper:#F7F5F0;
-  --ink:#211B16;
-  --steel:#82776E;
-  --steel-line:#E2DDD5;
-  --amber:#D48B28;       /* 웜 골드 포인트 */
-  --amber-deep:#B3701B;
-  --green:#4A7550;
+  --navy-deep:#0D1F17;
+  --navy-mid:#173427;
+  --brand-1:#1E523A;      /* 헤더/푸터 메인 그린 */
+  --brand-2:#2F7A58;      /* 히어로 배경 밝은 그린 */
+  --paper:#F2F5F3;
+  --ink:#14211A;
+  --steel:#6F8077;
+  --steel-line:#D4DDD8;
+  --amber:#D99B36;       /* 강조용 오렌지 골드 */
+  --amber-deep:#B87C21;
+  --green:#2A6B4A;
   --radius:4px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
