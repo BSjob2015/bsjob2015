@@ -7,129 +7,7 @@
 <meta name="description" content="부산일자리창출사회적협동조합 정관 전문(全文) 공시 페이지입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy-deep:#0F212C;
-  --navy-mid:#173447;
-  --paper:#F1F3EE;
-  --ink:#152026;
-  --steel:#75858D;
-  --steel-line:#D8DED9;
-  --amber:#CE8A2E;
-  --amber-deep:#B87621;
-  --green:#3E7A58;
-  --radius:2px;
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Noto Sans KR',sans-serif;
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3{font-family:'Noto Serif KR',serif;line-height:1.35;letter-spacing:-0.01em;}
-a{color:inherit;text-decoration:none;}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--amber-deep);text-transform:uppercase;}
-
-.header-shell{position:sticky;top:0;background:var(--navy-deep);z-index:50;}
-.nav-row{display:flex;align-items:flex-start;justify-content:space-between;max-width:1080px;margin:0 auto;padding:24px 28px 32px;}
-.nav-row ul{display:flex;list-style:none;font-size:14px;color:#EDEFEA;flex-wrap:wrap;}
-.nav-left ul li{margin:4px 22px 0 0;}
-.nav-right ul li{margin:4px 0 0 22px;}
-.nav-row a{color:#EDEFEA;opacity:.85;text-decoration:none;transition:opacity .15s,color .15s;}
-.nav-row a:hover{opacity:1;color:var(--amber);}
-.nav-row a.active{opacity:1;color:var(--amber);}
-.brand-spacer{width:180px;flex:none;}
-.wave-wrap{position:relative;line-height:0;margin-top:-2px;}
-.wave-wrap svg{display:block;width:100%;height:58px;}
-.brand-tab{
-  position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:180px;background:var(--paper);border-radius:0 0 18px 18px;
-  padding:22px 10px 16px;text-align:center;z-index:5;
-  box-shadow:0 10px 22px rgba(0,0,0,.2);
-}
-.brand-tab .bn{font-family:'Noto Serif KR',serif;font-weight:700;font-size:15px;color:var(--navy-deep);line-height:1.32;display:block;letter-spacing:-.01em;}
-.brand-tab .bs{display:inline-block;margin-top:7px;font-size:10px;color:var(--amber-deep);letter-spacing:.08em;font-weight:700;}
-@media (max-width:760px){
-  .header-shell{display:flex;flex-direction:column;}
-  .wave-wrap{display:none;}
-  .nav-row{order:2;flex-direction:column;padding:0 20px 22px;max-width:none;}
-  .nav-row ul{justify-content:center;flex-wrap:wrap;}
-  .nav-left ul li{margin:5px 9px;}
-  .nav-right ul li{margin:5px 9px;}
-  .brand-spacer{display:none;}
-  .brand-tab{order:1;position:static;transform:none;margin:0 auto;width:200px;box-shadow:none;padding:26px 10px 16px;}
-}
-
-.page-hero{
-  background:linear-gradient(180deg,var(--navy-deep) 0%, var(--navy-mid) 100%);
-  color:#EEF1EC;padding:64px 0 52px;
-}
-.page-hero h1{font-size:clamp(28px,4.2vw,40px);font-weight:900;margin:12px 0 16px;color:#fff;}
-.page-hero p{color:#C6D2D4;font-size:15.5px;max-width:600px;}
-.hero-meta{display:flex;flex-wrap:wrap;margin:22px 0 -14px -36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14);}
-.hero-meta div{font-size:12px;color:#93A8B2;letter-spacing:.04em;margin:8px 0 14px 36px;}
-.hero-meta strong{display:block;color:#EDEFEA;font-size:14.5px;font-weight:500;margin-top:4px;font-family:'Noto Serif KR',serif;}
-
-section{padding:64px 0;}
-.section-head{max-width:640px;margin-bottom:36px;}
-.section-head h2{font-size:24px;margin-top:10px;}
-.section-head p{color:var(--steel);font-size:14.5px;margin-top:10px;}
-
-.toc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--steel-line);border:1px solid var(--steel-line);}
-@media (max-width:760px){.toc-grid{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:480px){.toc-grid{grid-template-columns:1fr;}}
-.toc-item{background:#fff;padding:18px 20px;font-size:14px;display:flex;flex-direction:column;gap:4px;transition:background .15s;border-left:3px solid transparent;cursor:pointer;}
-.toc-item:hover{background:#F6F3EC;}
-.toc-item.current{background:#F6F3EC;border-left-color:var(--amber);}
-.toc-item .toc-num{font-family:'Noto Serif KR',serif;font-size:12px;color:var(--amber-deep);font-weight:700;}
-.toc-item .toc-title{font-weight:500;color:var(--ink);}
-
-.doc-body{max-width:740px;margin:0 auto;}
-.doc-frame{border:1px solid var(--steel-line);background:#fff;}
-.doc-frame-bar{
-  display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  padding:22px 30px;border-bottom:1px solid var(--steel-line);background:#F6F3EC;
-}
-.doc-frame-bar .eyebrow{display:block;margin-bottom:6px;}
-.doc-frame-bar h2{font-size:21px;}
-.doc-frame-nav{display:flex;gap:2px;flex:none;}
-.frame-nav-btn{
-  font-family:'Noto Sans KR',sans-serif;font-size:12.5px;font-weight:700;color:var(--navy-mid);
-  background:#fff;border:1px solid var(--steel-line);padding:9px 14px;cursor:pointer;transition:background .15s,color .15s;
-}
-.frame-nav-btn:hover:not(:disabled){background:var(--navy-deep);color:#fff;}
-.frame-nav-btn:disabled{color:var(--steel-line);cursor:default;}
-.doc-scroll{max-height:620px;overflow-y:auto;padding:32px 30px;}
-.panel{display:none;}
-.panel.active{display:block;}
-.article{margin-bottom:36px;}
-.article:last-child{margin-bottom:4px;}
-.article h3{font-size:16px;font-weight:700;color:var(--navy-mid);margin-bottom:12px;font-family:'Noto Serif KR',serif;}
-.article-note{display:inline-block;font-size:11.5px;font-weight:500;padding:2px 9px;border-radius:var(--radius);vertical-align:middle;letter-spacing:.02em;}
-.article-note.done{background:#FBF3E6;color:var(--amber-deep);}
-.article-note.pending{background:#EAEDE6;color:var(--steel);}
-p.clause{font-size:15px;color:var(--ink);line-height:1.85;margin-bottom:9px;padding-left:1.5em;text-indent:-1.5em;}
-p.plain{font-size:15px;color:var(--ink);line-height:1.85;margin-bottom:9px;}
-.item-list{list-style:decimal;padding-left:1.5em;margin:8px 0 16px;}
-.item-list li{font-size:14.5px;color:var(--ink);line-height:1.8;margin-bottom:6px;}
-.sub-list{list-style:none;padding-left:1.2em;margin:6px 0;}
-.sub-list li{font-size:14px;color:var(--steel);line-height:1.75;margin-bottom:5px;}
-.addendum-text{font-size:15px;color:var(--ink);line-height:1.85;}
-@media (max-width:600px){
-  .doc-frame-bar{padding:18px 20px;}
-  .doc-scroll{padding:24px 20px;max-height:64vh;}
-}
-
-footer{background:var(--navy-deep);color:#93A8B2;padding:44px 0 30px;font-size:13px;}
-footer .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;}
-footer .foot-inner>div{margin:0 20px 20px 0;}
-footer strong{color:#EDEFEA;font-family:'Noto Serif KR',serif;font-size:15px;display:block;margin-bottom:8px;}
-footer .legal{margin-top:28px;font-size:12px;color:#63767F;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -137,14 +15,14 @@ footer .legal{margin-top:28px;font-size:12px;color:#63767F;border-top:1px solid 
   <div class="nav-row">
     <nav class="nav-left"><ul>
       <li><a href="index.html#about">조합 소개</a></li>
-      <li><a href="#toc" class="active">조합정관</a></li>
       <li><a href="index.html#business">사업 안내</a></li>
+      <li><a href="index.html#report">신고 안내</a></li>
     </ul></nav>
     <div class="brand-spacer"></div>
     <nav class="nav-right"><ul>
-      <li><a href="index.html#disclosure">공익 공시</a></li>
-      <li><a href="index.html#report">신고 안내</a></li>
       <li><a href="index.html#contact">오시는 길</a></li>
+      <li><a href="#toc" class="active">조합정관</a></li>
+      <li><a href="disclosure.html">공익 공시</a></li>
     </ul></nav>
   </div>
   <div class="wave-wrap">
@@ -524,7 +402,8 @@ footer .legal{margin-top:28px;font-size:12px;color:#63767F;border-top:1px solid 
     </div>
     <div>
       <strong>문의</strong>
-      전화 · 이메일 준비 중<br>
+      전화 <a href="tel:051-907-0700">051-907-0700</a><br>
+      이메일 <a href="mailto:urisolarbk@naver.com">urisolarbk@naver.com</a><br>
       이사장 김재호
     </div>
   </div>

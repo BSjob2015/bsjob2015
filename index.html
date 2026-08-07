@@ -7,196 +7,7 @@
 <meta name="description" content="부산일자리창출사회적협동조합 - 탄소중립·에너지전환 인력양성과 취약계층 일자리·사회서비스를 제공하는 사회적협동조합입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy-deep:#0F212C;
-    --navy-mid:#173447;
-    --paper:#F1F3EE;
-    --ink:#152026;
-    --steel:#75858D;
-    --steel-line:#D8DED9;
-    --amber:#CE8A2E;
-    --amber-deep:#B87621;
-    --green:#3E7A58;
-    --radius:2px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Noto Sans KR',sans-serif;
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{
-    font-family:'Noto Serif KR',serif;
-    line-height:1.35;
-    letter-spacing:-0.01em;
-  }
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
-  .eyebrow{
-    font-size:12px;
-    font-weight:700;
-    letter-spacing:.18em;
-    color:var(--amber-deep);
-    text-transform:uppercase;
-  }
-  /* Header — wave band with a suspended brand tab */
-  .header-shell{position:sticky;top:0;background:var(--navy-deep);z-index:50;}
-  .nav-row{display:flex;align-items:flex-start;justify-content:space-between;max-width:1080px;margin:0 auto;padding:24px 28px 32px;}
-  .nav-row ul{display:flex;list-style:none;font-size:14px;color:#EDEFEA;flex-wrap:wrap;}
-  .nav-left ul li{margin:4px 22px 0 0;}
-  .nav-right ul li{margin:4px 0 0 22px;}
-  .nav-row a{color:#EDEFEA;opacity:.85;text-decoration:none;transition:opacity .15s,color .15s;}
-  .nav-row a:hover{opacity:1;color:var(--amber);}
-  .nav-row a.active{opacity:1;color:var(--amber);}
-  .brand-spacer{width:180px;flex:none;}
-  .wave-wrap{position:relative;line-height:0;margin-top:-2px;}
-  .wave-wrap svg{display:block;width:100%;height:58px;}
-  .brand-tab{
-    position:absolute;top:0;left:50%;transform:translateX(-50%);
-    width:180px;background:var(--paper);border-radius:0 0 18px 18px;
-    padding:22px 10px 16px;text-align:center;z-index:5;
-    box-shadow:0 10px 22px rgba(0,0,0,.2);
-  }
-  .brand-tab .bn{font-family:'Noto Serif KR',serif;font-weight:700;font-size:15px;color:var(--navy-deep);line-height:1.32;display:block;letter-spacing:-.01em;}
-  .brand-tab .bs{display:inline-block;margin-top:7px;font-size:10px;color:var(--amber-deep);letter-spacing:.08em;font-weight:700;}
-  @media (max-width:760px){
-    .header-shell{display:flex;flex-direction:column;}
-    .wave-wrap{display:none;}
-    .nav-row{order:2;flex-direction:column;padding:0 20px 22px;max-width:none;}
-    .nav-row ul{justify-content:center;flex-wrap:wrap;}
-    .nav-left ul li{margin:5px 9px;}
-    .nav-right ul li{margin:5px 9px;}
-    .brand-spacer{display:none;}
-    .brand-tab{order:1;position:static;transform:none;margin:0 auto;width:200px;box-shadow:none;padding:26px 10px 16px;}
-  }
-
-  /* Hero */
-  .hero{
-    background:
-      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(206,138,46,.18), transparent 60%),
-      linear-gradient(180deg,var(--navy-deep) 0%, var(--navy-mid) 100%);
-    color:#EEF1EC;
-    padding:96px 0 84px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero svg.skyline{
-    position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;opacity:.5;
-  }
-  .hero-inner{max-width:680px;position:relative;z-index:2;}
-  .hero h1{
-    font-size:clamp(30px,4.6vw,46px);
-    font-weight:900;
-    margin:14px 0 20px;
-    color:#fff;
-  }
-  .hero p{
-    font-size:16.5px;
-    color:#C6D2D4;
-    max-width:560px;
-    margin-bottom:34px;
-  }
-  .btn{
-    display:inline-block;
-    padding:13px 26px;
-    font-size:14px;
-    font-weight:700;
-    border-radius:var(--radius);
-    border:1px solid transparent;
-    cursor:pointer;
-  }
-  .btn-primary{background:var(--amber);color:#1B1204;}
-  .btn-primary:hover{background:var(--amber-deep);}
-  .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff;margin-left:10px;}
-  .btn-ghost:hover{border-color:#fff;}
-
-  /* Section generic */
-  section{padding:76px 0;}
-  section.alt{background:#EAEDE6;}
-  .section-head{max-width:600px;margin-bottom:42px;}
-  .section-head h2{font-size:28px;margin-top:10px;}
-  .section-head p{color:var(--steel);font-size:15px;margin-top:10px;}
-
-  /* 설립정보 카드 */
-  .info-card{
-    background:var(--navy-deep);
-    color:#EDEFEA;
-    border-radius:var(--radius);
-    padding:36px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px 40px;
-  }
-  @media (max-width:640px){.info-card{grid-template-columns:1fr;}}
-  .info-row dt{font-size:12px;color:#93A8B2;letter-spacing:.06em;margin-bottom:4px;}
-  .info-row dd{font-size:16px;font-weight:500;}
-
-  /* 사업 카드 */
-  .biz-grid{
-    display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
-    background:var(--steel-line);
-    border:1px solid var(--steel-line);
-  }
-  @media (max-width:640px){.biz-grid{grid-template-columns:1fr;}}
-  .biz-card{
-    background:var(--paper);
-    padding:32px 30px;
-  }
-  .biz-card .num{
-    font-family:'Noto Serif KR',serif;
-    font-size:13px;color:var(--amber-deep);font-weight:700;
-  }
-  .biz-card h3{font-size:18px;margin:10px 0 10px;}
-  .biz-card p{font-size:14px;color:var(--steel);}
-
-  /* 공익 공시 */
-  .disclosure-table{
-    width:100%;border-collapse:collapse;background:#fff;
-    border:1px solid var(--steel-line);
-  }
-  .disclosure-table th,.disclosure-table td{
-    padding:16px 20px;text-align:left;font-size:14.5px;
-    border-bottom:1px solid var(--steel-line);
-  }
-  .disclosure-table th{
-    background:#F6F3EC;font-size:12px;letter-spacing:.06em;color:var(--steel);
-    text-transform:uppercase;font-weight:700;
-  }
-  .empty-note{
-    margin-top:16px;font-size:13.5px;color:var(--steel);
-    padding:14px 18px;border-left:3px solid var(--amber);background:#F6F3EC;
-  }
-
-  /* 신고 배너 */
-  .report-banner{
-    background:var(--navy-mid);
-    color:#EDEFEA;
-    padding:52px 0;
-  }
-  .report-banner h2{color:#fff;font-size:22px;}
-  .report-banner p{color:#B9C6C9;font-size:14.5px;margin:10px 0 26px;max-width:560px;}
-  .report-links{display:flex;flex-wrap:wrap;gap:12px;}
-  .report-link{
-    display:flex;align-items:center;gap:10px;
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.18);
-    padding:14px 20px;border-radius:var(--radius);
-    font-size:14px;font-weight:500;
-    transition:border-color .15s, background .15s;
-  }
-  .report-link:hover{border-color:var(--amber);background:rgba(206,138,46,.12);}
-  .report-link .dot{width:7px;height:7px;background:var(--amber);border-radius:50%;flex:none;}
-
-  /* Footer */
-  footer{background:var(--navy-deep);color:#93A8B2;padding:44px 0 30px;font-size:13px;}
-  footer .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;}
-  footer strong{color:#EDEFEA;font-family:'Noto Serif KR',serif;font-size:15px;display:block;margin-bottom:8px;}
-  footer .legal{margin-top:28px;font-size:12px;color:#63767F;border-top:1px solid rgba(255,255,255,.08);padding-top:18px;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -204,14 +15,14 @@
   <div class="nav-row">
     <nav class="nav-left"><ul>
       <li><a href="#about">조합 소개</a></li>
-      <li><a href="articles.html">조합정관</a></li>
       <li><a href="#business">사업 안내</a></li>
+      <li><a href="#report">신고 안내</a></li>
     </ul></nav>
     <div class="brand-spacer"></div>
     <nav class="nav-right"><ul>
-      <li><a href="#disclosure">공익 공시</a></li>
-      <li><a href="#report">신고 안내</a></li>
       <li><a href="#contact">오시는 길</a></li>
+      <li><a href="articles.html">조합정관</a></li>
+      <li><a href="disclosure.html">공익 공시</a></li>
     </ul></nav>
   </div>
   <div class="wave-wrap">
@@ -289,25 +100,6 @@
   </div>
 </section>
 
-<section id="disclosure">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Disclosure</span>
-      <h2>기부금 모금액 및 활용실적</h2>
-      <p>정관 제68조③에 따라 연간 기부금 모금액 및 활용실적을 홈페이지를 통해 공개합니다.</p>
-    </div>
-    <table class="disclosure-table">
-      <thead>
-        <tr><th>연도</th><th>모금액</th><th>활용실적</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>2026년</td><td>0원</td><td>해당 없음</td></tr>
-      </tbody>
-    </table>
-    <p class="empty-note">아직 모금된 기부금이 없습니다. 실적이 발생하는 즉시 이 페이지에 갱신하여 공개합니다.</p>
-  </div>
-</section>
-
 <div class="report-banner" id="report">
   <div class="wrap">
     <span class="eyebrow" style="color:var(--amber);">Report</span>
@@ -330,12 +122,13 @@
     </div>
     <div>
       <strong>문의</strong>
-      전화 · 이메일 준비 중<br>
+      전화 <a href="tel:051-907-0700">051-907-0700</a><br>
+      이메일 <a href="mailto:urisolarbk@naver.com">urisolarbk@naver.com</a><br>
       이사장 김재호
     </div>
   </div>
   <div class="wrap legal">
-    &copy; 2026 부산일자리창출사회적협동조합. 정관 제68조③에 따라 기부금 모금액 및 활용실적을 본 홈페이지를 통해 공개합니다.
+    &copy; 2026 부산일자리창출사회적협동조합. 정관 제58조(운영의 공개)에 따라 주요 정보를 본 홈페이지를 통해 공개합니다.
   </div>
 </footer>
 
