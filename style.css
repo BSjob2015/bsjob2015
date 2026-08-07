@@ -6,7 +6,7 @@
 :root {
   --ink: #1A1A1A;           /* 본문/제목 텍스트 - 검정 */
   --steel: #6B6F6D;          /* 서브 텍스트 - 중간 회색 */
-  --steel-line: #E3E3E0;     /* 옅은 테두리선 */
+  --steel-line: #E3E3E0;      /* 옅은 테두리선 */
   --paper: #FFFFFF;          /* 배경 화이트 */
   --panel: #F2F2EF;          /* 연한 그레이 패널 배경 */
   --amber: #F2B229;          /* 포인트 컬러 (버튼/강조용, 최소한만 사용) */
@@ -145,6 +145,56 @@ section.alt{background:var(--panel);}
 .info-row dt{font-size:12px;color:var(--steel);letter-spacing:.06em;margin-bottom:4px;}
 .info-row dd{font-size:16px;font-weight:500;color:var(--ink);}
 
+/* ---------- 서류 이미지 좌우 가로 나열 (index.html 추가) ---------- */
+.doc-image-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important; /* 가로 2열 좌우 배치 */
+  gap: 16px !important;                      /* 두 상자 간 간격 */
+  margin-top: 20px !important;                 /* 상단 정보 박스와의 간격 */
+  width: 100% !important;                     /* 상단 박스와 너비 통일 */
+  box-sizing: border-box !important;
+}
+
+.doc-image-box {
+  background: var(--panel);
+  border: 1px solid var(--steel-line);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.doc-image-box h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.doc-image-box img {
+  width: 100% !important;                     /* 영역 안에서 너비 100% 채움 */
+  height: auto !important;                    /* 이미지 세로 비율 유지 */
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--steel-line);
+  background: #FFFFFF;
+  box-sizing: border-box;
+  transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.doc-image-box a:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 모바일 화면에서는 1열 세로 정렬 */
+@media (max-width: 480px) {
+  .doc-image-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* ---------- 사업 안내: 사업 카드 (index.html) ---------- */
 .biz-grid{
   display:grid;grid-template-columns:repeat(2,1fr);gap:2px;
@@ -273,98 +323,3 @@ footer .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;}
 footer .foot-inner>div{margin:0 20px 20px 0;}
 footer strong{color:var(--ink);font-family:'Noto Serif KR',serif;font-size:15px;display:block;margin-bottom:8px;}
 footer .legal{margin-top:28px;font-size:12px;color:var(--steel);border-top:1px solid var(--steel-line);padding-top:18px;}
-
-/* ---------- 조합 소개: 이미지 직접 출력 스타일 ---------- */
-.doc-image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 16px;
-  width: 100%;
-}
-
-.doc-image-box {
-  background: var(--panel);
-  border: 1px solid var(--steel-line);
-  border-radius: var(--radius);
-  padding: 20px;
-  text-align: center;
-}
-
-.doc-image-box h3 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-
-.doc-image-box img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--steel-line);
-  background: #FFFFFF;
-  transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.doc-image-box a:hover img {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 640px) {
-  .doc-image-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* 서류 이미지 나란히(2열) 배치 */
-.doc-image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 50:50 2열 나열 */
-  gap: 16px;                            /* 이미지 상자 간 간격 */
-  margin-top: 20px;                     /* 상단 정보 박스와의 간격 */
-  width: 100%;                          /* 홈페이지 폭 전체 맞춤 */
-}
-
-.doc-image-box {
-  background: var(--panel);
-  border: 1px solid var(--steel-line);
-  border-radius: var(--radius);
-  padding: 20px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.doc-image-box h3 {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 12px;
-}
-
-.doc-image-box img {
-  width: 100%;                          /* 상자 너비에 100% 맞춤 */
-  height: auto;                         /* 비율 유지 */
-  display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--steel-line);
-  background: #FFFFFF;
-  transition: transform .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.doc-image-box a:hover img {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* 모바일 화면 (화면 폭이 좁아질 때 세로로 자동 전환) */
-@media (max-width: 640px) {
-  .doc-image-grid {
-    grid-template-columns: 1fr;
-  }
-}
