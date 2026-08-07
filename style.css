@@ -1,29 +1,20 @@
 /* =========================================================
-   부산일자리창출사회적협동조합 — 엣지 & 세이지 그린 스타일시트
+   부산일자리창출사회적협동조합 — 탄소중립 에코 그린 스타일시트
+   index.html / articles.html / disclosure.html 공유 파일
    ========================================================= */
 
 :root {
-  /* [변경] 메인 그린: 짙은 그린에서 뮤트(세이지) 그린으로 변경 */
-  --brand-1: #6B8E78;       /* 헤더/주요 포인트: 연하고 차분한 세이지 그린 */
-  --brand-2: #4A6354;       /* 히어로/배너: 조금 더 딥한 세이지 그린 */
-  
-  /* [변경] 포인트 컬러: 쨍한 옐로우에서 머스타드 옐로우로 변경 */
-  --amber: #D9B35F;         /* 이미지 포인트: 고급스러운 머스타드 */
-  --amber-deep: #B5934F;    /* hover 등 */
-
-  /* [변경] 배경: 순백색에서 미세한 아이보리 톤으로 변경 */
-  --paper: #FAF9F6;         /* 기본 배경: 부드러운 화이트 */
-  
-  /* [변경] 텍스트: 검정에 가까운 숯색에서 짙은 그레이로 변경 */
-  --ink: #333333;           /* 본문 텍스트: 차분한 그레이 */
-  --steel: #777777;         /* 서브 글자색: 더 연한 그레이 */
-  --steel-line: #E5E1D8;    /* 연한 테두리선: 미세한 웜그레이 */
-
-  /* [유지/미세 조정] 엣지 포인트: 딥 그린 톤을 유지하여 대비감 부여 */
-  --navy-deep: #0B2410;     /* 브랜드의 무게감을 주는 가장 어두운 색 */
-  --navy-mid: #143D1A;      /* 중간 딥 그린 */
-  
-  --green: #6B8E78;         /* 기본 그린 포인트 */
+  --navy-deep: #0E2E14;
+  --navy-mid: #184A20;
+  --brand-1: #288B38;       /* 주요 포인트 메인 그린 */
+  --brand-2: #1E6B28;       /* 히어로/배너 딥 그린 */
+  --paper: #FFFFFF;         /* 기본 배경 화이트 */
+  --ink: #112415;           /* 본문 텍스트 딥 차콜 */
+  --steel: #5E7562;         /* 서브 글자색 */
+  --steel-line: #E1ECE3;    /* 연한 테두리선 */
+  --amber: #F2B229;         /* 이미지 포인트 옐로우 */
+  --amber-deep: #D99A1C;
+  --green: #288B38;
   --radius: 6px;
 }
 
@@ -41,23 +32,36 @@ a{color:inherit;text-decoration:none;}
 .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
 .eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--brand-1);text-transform:uppercase;}
 
-/* ---------- Header: 친환경 그린 톤 헤더 ---------- */
-.header-shell{position:sticky;top:0;background:var(--brand-1);z-index:50;}
-.nav-row{display:flex;align-items:flex-start;justify-content:space-between;max-width:1080px;margin:0 auto;padding:24px 28px 32px;}
-.nav-row ul{display:flex;list-style:none;font-size:14px;color:#FFFFFF;flex-wrap:wrap;}
+/* ---------- Header: 배경 흰색, 글자 다크톤, 폭 2/3 (720px) ---------- */
+.header-shell{
+  position:sticky;
+  top:0;
+  background:#FFFFFF;
+  border-bottom:1px solid var(--steel-line);
+  z-index:50;
+}
+.nav-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  max-width:720px; /* 기존 1080px에서 2/3 수준인 720px로 조절 */
+  margin:0 auto;
+  padding:20px 28px 24px;
+}
+.nav-row ul{display:flex;list-style:none;font-size:14px;color:var(--navy-deep);flex-wrap:wrap;}
 .nav-left ul li{margin:4px 22px 0 0;}
 .nav-right ul li{margin:4px 0 0 22px;}
-.nav-row a{color:#FFFFFF;opacity:.9;text-decoration:none;transition:opacity .15s,color .15s;}
-.nav-row a:hover{opacity:1;color:var(--amber);}
-.nav-row a.active{opacity:1;color:var(--amber);font-weight:700;}
-.brand-spacer{width:180px;flex:none;}
+.nav-row a{color:var(--navy-deep);opacity:.85;text-decoration:none;transition:opacity .15s,color .15s;}
+.nav-row a:hover{opacity:1;color:var(--brand-1);}
+.nav-row a.active{opacity:1;color:var(--brand-1);font-weight:700;}
+.brand-spacer{width:160px;flex:none;}
 .wave-wrap{position:relative;line-height:0;margin-top:-2px;}
-.wave-wrap svg{display:block;width:100%;height:58px;fill:var(--brand-1);}
+.wave-wrap svg{display:block;width:100%;height:48px;fill:#FFFFFF;}
 .brand-tab{
   position:absolute;top:0;left:50%;transform:translateX(-50%);
-  width:180px;background:#FFFFFF;border-radius:0 0 18px 18px;
-  padding:22px 10px 16px;text-align:center;z-index:5;
-  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  width:170px;background:#FFFFFF;border:1px solid var(--steel-line);border-top:none;border-radius:0 0 18px 18px;
+  padding:18px 10px 14px;text-align:center;z-index:5;
+  box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
 .brand-tab .bn{font-family:'Noto Serif KR',serif;font-weight:700;font-size:15px;color:var(--navy-deep);line-height:1.32;display:block;letter-spacing:-.01em;}
 .brand-tab .bs{display:inline-block;margin-top:7px;font-size:10px;color:var(--brand-1);letter-spacing:.08em;font-weight:700;}
