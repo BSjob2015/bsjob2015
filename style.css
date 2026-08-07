@@ -236,6 +236,24 @@ p.plain{font-size:15px;color:var(--ink);line-height:1.85;margin-bottom:9px;}
   padding:14px 18px;border-left:3px solid var(--amber);background:#F6F3EC;
 }
 
+/* ---------- 연혁: 타임라인 (history.html) ---------- */
+.timeline{max-width:740px;margin:0 auto;}
+.tl-year-group{display:flex;gap:24px;padding:26px 0;border-top:1px solid var(--steel-line);}
+.tl-year-group:first-child{border-top:none;padding-top:0;}
+.tl-year{flex:none;width:84px;font-family:'Noto Serif KR',serif;font-size:26px;font-weight:900;color:var(--amber-deep);padding-top:2px;}
+.tl-events{flex:1;border-left:2px solid var(--steel-line);padding-left:26px;}
+.tl-event{position:relative;margin-bottom:16px;}
+.tl-event:last-child{margin-bottom:0;}
+.tl-event::before{content:'';position:absolute;left:-31px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--amber);}
+.tl-date{display:block;font-size:12px;color:var(--steel);letter-spacing:.03em;margin-bottom:3px;font-weight:700;}
+.tl-event p{font-size:14.5px;color:var(--ink);line-height:1.7;}
+@media (max-width:560px){
+  .tl-year-group{gap:14px;}
+  .tl-year{width:56px;font-size:19px;}
+  .tl-events{padding-left:18px;}
+  .tl-event::before{left:-23px;}
+}
+
 /* ---------- 푸터 (모든 페이지 공통) ---------- */
 footer{background:var(--navy-deep);color:#93A8B2;padding:44px 0 30px;font-size:13px;}
 footer .foot-inner{display:flex;justify-content:space-between;flex-wrap:wrap;}
