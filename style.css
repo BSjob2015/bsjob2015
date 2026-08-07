@@ -121,6 +121,7 @@ section.alt{background:#EAEDE6;}
 .section-head h2{font-size:28px;margin-top:10px;}
 .section-head p{color:var(--steel);font-size:15px;margin-top:10px;}
 .doc-body{max-width:740px;margin:0 auto;}
+#about .section-head{max-width:none;}
 
 /* ---------- 조합 소개: 설립정보 카드 (index.html) ---------- */
 .info-card{
