@@ -5,18 +5,18 @@
    ========================================================= */
 
 :root{
-  --navy-deep:#0F212C;
-  --navy-mid:#173447;
-  --brand-1:#1F6E96;
-  --brand-2:#3D93BD;
-  --paper:#F1F3EE;
-  --ink:#152026;
-  --steel:#75858D;
-  --steel-line:#D8DED9;
-  --amber:#CE8A2E;
-  --amber-deep:#B87621;
-  --green:#3E7A58;
-  --radius:2px;
+  --navy-deep:#1F1914;
+  --navy-mid:#332921;
+  --brand-1:#4A382A;      /* 따뜻한 브라운 토프 */
+  --brand-2:#6E5440;
+  --paper:#F7F5F0;
+  --ink:#211B16;
+  --steel:#82776E;
+  --steel-line:#E2DDD5;
+  --amber:#D48B28;       /* 웜 골드 포인트 */
+  --amber-deep:#B3701B;
+  --green:#4A7550;
+  --radius:4px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
